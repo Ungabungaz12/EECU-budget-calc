@@ -1,0 +1,120 @@
+:root {
+    --primary-blue: #095AA7;
+    --primary-white: #FFFAFB;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "Playfair Display";
+}
+
+nav {
+    &::before {
+
+    }
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    list-style: none;
+
+    border: 2px solid black;
+    padding: 10px;
+
+    /* Logo */
+    & .logo {
+        margin-right: 50%;
+    }
+
+    /* Section of text anchor links at right of nav */
+    & #textclickables {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* Targets individual anchor links */
+nav ul li {
+    background-color: var(--primary-blue);
+    padding: 1rem 2rem; /* May need to change to fix dimensions of whatever words apepar */
+    border-radius: 10px;
+}
+
+#contentContainer {
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#interactables {
+    display: grid;
+    grid-template: auto 100px / 250px auto;
+    /* 250px is the pie chart, change as you like */
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+/* Step container */
+.stepContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    padding: 10px;
+
+    /* Individual elements */
+    & button {
+        border: 3px solid black;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+
+        font-size: 20px;
+
+        /* Create lines between numbers */
+        /* DOesn't rlly work rn */
+        &::after {
+            content: '';
+            width: 50px;
+            border: 2px solid black;
+        }
+    }
+
+    & .active {
+        background-color: var(--primary-blue);
+        color: var(--primary-white);
+    }
+}
+
+#chartContainer {
+    border: 2px solid black;
+    border-radius: 20px;
+    grid-area: 1 / 1 / span 2;
+}
+
+/* Input Fields */
+form .inputs {
+    /* Want an auto-row here, maybe */
+    /* gap pls */
+    display: grid;
+    grid-template: 50px / auto auto
+}
+
+/* For forms */
+.inactive {
+    display: none;
+}
+
+/* Next button */
+#nextForm {
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    width: 80px;
+    height: 40px;
+}
